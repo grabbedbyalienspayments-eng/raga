@@ -5,7 +5,7 @@ import AutoImport from "unplugin-auto-import/vite";
 
 const base = process.env.BASE_PATH || "/";
 const isPreview = process.env.IS_PREVIEW ? true : false;
-// https://vite.dev/config/
+
 export default defineConfig({
   define: {
     __BASE_PATH__: JSON.stringify(base),
@@ -20,45 +20,20 @@ export default defineConfig({
       imports: [
         {
           react: [
-            "React",
-            "useState",
-            "useEffect",
-            "useContext",
-            "useReducer",
-            "useCallback",
-            "useMemo",
-            "useRef",
-            "useImperativeHandle",
-            "useLayoutEffect",
-            "useDebugValue",
-            "useDeferredValue",
-            "useId",
-            "useInsertionEffect",
-            "useSyncExternalStore",
-            "useTransition",
-            "startTransition",
-            "lazy",
-            "memo",
-            "forwardRef",
-            "createContext",
-            "createElement",
-            "cloneElement",
-            "isValidElement",
+            "React", "useState", "useEffect", "useContext", "useReducer",
+            "useCallback", "useMemo", "useRef", "useImperativeHandle",
+            "useLayoutEffect", "useDebugValue", "useDeferredValue", "useId",
+            "useInsertionEffect", "useSyncExternalStore", "useTransition",
+            "startTransition", "lazy", "memo", "forwardRef", "createContext",
+            "createElement", "cloneElement", "isValidElement",
           ],
         },
         {
           "react-router-dom": [
-            "useNavigate",
-            "useLocation",
-            "useParams",
-            "useSearchParams",
-            "Link",
-            "NavLink",
-            "Navigate",
-            "Outlet",
+            "useNavigate", "useLocation", "useParams", "useSearchParams",
+            "Link", "NavLink", "Navigate", "Outlet",
           ],
         },
-        // React i18n
         {
           "react-i18next": ["useTranslation", "Trans"],
         },
@@ -69,7 +44,7 @@ export default defineConfig({
   base,
   build: {
     sourcemap: true,
-    outDir: "out",
+    outDir: "dist",
   },
   resolve: {
     alias: {
